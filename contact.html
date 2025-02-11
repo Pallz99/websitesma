@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - SMAN 1 Sungai Pandan</title>
+    <link rel="shortcut icon" type="x-icon" href="assets/logonobackground.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container-fluid {
+            flex: 1;
+        }
+
+        
+
+        .contact-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 8px;
+            font-size: 24px;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #007bff;
+        }
+
+        .contact-form {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+
+        .contact-form button:hover {
+            background: darkgreen;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="contact.html">
+                <img src="assets/logonobackground.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+                SMAN 1 Sungai Pandan
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="contact-container">
+        <!-- Informasi Kontak -->
+        <div class="contact-info">
+            <h2>Hubungi Kami</h2>
+            <p><strong>SMAN 1 Sungai Pandan</strong></p>
+            <p><i class="fas fa-map-marker-alt"></i> Jl. Banyu Tajun Pangkalan, Sungai Pandan, Kalimantan Selatan</p>
+            <p><i class="fas fa-phone"></i> (+62) 81351442733</p>
+            <p><i class="fas fa-envelope"></i> sman1sp.web@gmail.com</p>
+
+            <!-- Media Sosial -->
+            <h3>Social Media:</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/15zaJLxS9R/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/sman1sp?igsh=MXJ1dDZ4czM2NWppNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/@fls2nsman1sungaipandan?si=zefj1tfoFCLp-MXP" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://wa.me/6281351442733" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <!-- Form Kritik dan Saran -->
+        <div class="contact-form">
+            <h2>Kritik dan Saran</h2>
+            <form>
+                <input type="text" name="name" placeholder="Nama" required>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" name="phone" placeholder="No. HP / WA" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <select name="jenis-info" required>
+                    <option value="" disabled selected>Pilih Kategori</option>
+                    <option value="informasi">Informasi Sekolah</option>
+                    <option value="pengaduan">Pengaduan</option>
+                    <option value="saran">Saran & Masukan</option>
+                </select>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Pesan Anda" rows="5" required></textarea>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Kirim Aspirasi</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 SMAN 1 Sungai Pandan. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add("show"); // Tambahkan efek fade-in saat halaman dimuat
+        
+            document.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", function(event) {
+                    // Cek apakah link adalah halaman yang sama (hindari link eksternal)
+                    if (this.href.startsWith(window.location.origin)) {
+                        event.preventDefault(); // Cegah perpindahan langsung
+                        let targetUrl = this.href;
+        
+                        // Tambahkan efek fade-out sebelum berpindah halaman
+                        document.body.style.opacity = "0";
+                        document.body.style.transform = "translateY(10px)";
+        
+                        setTimeout(() => {
+                            window.location.href = targetUrl;
+                        }, 500); // Tunggu 500ms sebelum pindah halaman
+                    }
+                });
+            });
+        });
+        </script>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            let phone = document.querySelector("input[name='phone']").value;
+            let email = document.querySelector("input[name='email']").value;
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            let phonePattern = /^[0-9]{10,13}$/;
+    
+            if (!email.match(emailPattern)) {
+                alert("Email tidak valid! Gunakan format yang benar, contoh: example@email.com");
+                event.preventDefault();
+            }
+    
+            if (!phone.match(phonePattern)) {
+                alert("Nomor HP/WA tidak valid! Masukkan hanya angka dengan panjang 10-13 digit.");
+                event.preventDefault();
+            }
+        });
+    </script>
+    
+</body>
+</html>

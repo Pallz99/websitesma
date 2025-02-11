@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMAN 1 Sungai Pandan</title>
+    <link rel="shortcut icon" type="x-icon" href="assets/logonobackground.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .hero {background: url('assets/school.jpg') center/cover no-repeat;
+            padding: 120px 0;
+            color: white; 
+        }
+        hr {
+            border: 2px solid #000000;
+            opacity: 0.5;
+            margin: 40px auto;
+            width: 100%;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+            <img src="assets/logonobackground.png" alt="Logo Sekolah" class="logo">SMAN 1 Sungai Pandan
+        </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html" class="tbl-biru" >Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <header id="hero-section" class="hero text-center">
+        <div class="container">
+            <h1>Selamat Datang di SMAN 1 Sungai Pandan</h1>
+            <p class="lead">Membentuk Generasi Unggul dan Berkarakter</p>
+            <button id="openModalBtn" class="btn btn-light">Pelajari Lebih Lanjut</button>
+        </div>
+    </header>
+    
+    
+    <!-- Modal Pop-up -->
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <button class="close-btn" id="closeModalBtn">&times;</button>
+
+        <div class="header">
+            <h3>PENDAFTARAN:</h3>
+        </div>
+        <div class="modal-body">
+            <p>Setiap hari kerja (Senin - Sabtu) Kantor SMAN 1 Sungai Pandan (Pendaftaran Gratis)</p>
+            <p><strong>Pendaftaran Nama (INDEN) dari sekarang!</strong></p>
+            <a href="https://s.id/PPDB_SMANISP_2025" target="_blank" class="link">https://s.id/PPDB_SMANISP_2025</a>
+        </div>
+
+        <div class="header">
+            <h3>PERSYARATAN:</h3>
+        </div>
+        <ul class="requirements">
+            <li>📝 Mengisi formulir pendaftaran</li>
+            <li>📸 Pas Foto 3x4 (4 lembar)</li>
+            <li>📜 Fc Surat Keterangan Lulus (2 Lembar)</li>
+            <li>🎓 Fc Ijazah SMP/MTS (2 Lembar)</li>
+            <li>🍼 Fc Akta Kelahiran (2 Lembar)</li>
+            <li>🏠 Fc Kartu Keluarga (2 Lembar)</li>
+            <li>💳 Fc KIP/KKS "JIKA ADA"</li>
+            <li>🏅 Fc Sertifikat Prestasi "JIKA ADA"</li>
+        </ul>
+
+        <div class="akreditasi">
+            <img src="assets/akreditasi.png" alt="Akreditasi A">
+        </div>
+    </div>
+</div>
+    
+
+
+    <section class="container my-5">
+        <h2 class="text-center">Tentang Sekolah Kami</h2>
+        <p class="text-center">Selamat datang di website resmi SMAN 1 Sungai Pandan, tempat di mana pendidikan berkualitas dan karakter unggul menjadi prioritas utama. SMAN 1 Sungai Pandan adalah sekolah yang berfokus pada pendidikan berkualitas dan berkarakter Dengan didukung oleh tenaga pendidik profesional, kurikulum yang inovatif, serta fasilitas modern, kami berusaha menciptakan lingkungan belajar yang inspiratif dan kondusif.
+            Bergabunglah dengan kami untuk menjadi bagian dari komunitas pendidikan yang berkualitas dan berdaya saing tinggi. Mari bersama-sama membangun masa depan yang lebih cerah melalui pendidikan yang bermakna..</p>
+    </section>
+
+    <hr>
+
+    <section id="kontak" class="container my-5">
+        <h2 class="text-center">Hubungi Kami</h2>
+        <p class="text-center"><i class="fas fa-map-marker-alt"></i> Jl. Banyu Tajun Pangkalan, Kec. Sungai Pandan, Kab. Hulu Sungai Utara, Kalimantan Selatan</p>
+    <p class="text-center"><i class="fas fa-phone"></i> (+62) 81351442733 | <i class="fas fa-envelope"></i> sman1sp.web@gmail.com</p>
+    </section>
+    
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 SMAN 1 Sungai Pandan. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add("show"); // Tambahkan efek fade-in saat halaman dimuat
+        
+            document.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", function(event) {
+                    // Cek apakah link adalah halaman yang sama (hindari link eksternal)
+                    if (this.href.startsWith(window.location.origin)) {
+                        event.preventDefault(); // Cegah perpindahan langsung
+                        let targetUrl = this.href;
+        
+                        // Tambahkan efek fade-out sebelum berpindah halaman
+                        document.body.style.opacity = "0";
+                        document.body.style.transform = "translateY(10px)";
+        
+                        setTimeout(() => {
+                            window.location.href = targetUrl;
+                        }, 500); // Tunggu 500ms sebelum pindah halaman
+                    }
+                });
+            });
+        });
+        </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let images = [
+            "assets/school.jpg",
+            "assets/event1.jpg",
+            "assets/event2.jpg"
+        ];
+        
+        let index = 0;
+        const heroSection = document.getElementById("hero-section");
+
+        function changeBackground() {
+            heroSection.style.backgroundImage = `url('${images[index]}')`;
+            index = (index + 1) % images.length; // Loop ke gambar berikutnya
+        }
+
+        // Atur gambar pertama dan mulai slideshow
+        changeBackground();
+        setInterval(changeBackground, 5000); // Ganti gambar setiap 5 detik
+    });
+</script>
+
+</body>
+</html>

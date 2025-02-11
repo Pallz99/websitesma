@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - SMAN 1 Sungai Pandan</title>
+    <link rel="shortcut icon" type="x-icon" href="assets/logonobackground.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        body.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hero {
+            background: url('assets/backgroundgalery.jpg') center/cover no-repeat;
+            padding: 120px 0;
+            color: white;
+            text-align: center;
+        }
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 40px 0;
+        }
+        .gallery-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 800px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery-item img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-text {
+            max-width: 400px;
+        }
+        .gallery-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="gallery.html">
+                <img src="assets/logonobackground.png" alt="Logo Sekolah" class="logo"> SMAN 1 Sungai Pandan
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="hero">
+        <div class="container">
+            <h1>Galeri Kegiatan</h1>
+            <p class="lead">Dokumentasi kegiatan sekolah SMAN 1 Sungai Pandan</p>
+        </div>
+    </header>
+    
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Koleksi beberapa Foto lingkungan Sekolah</h2>
+        <div class="gallery-container">
+            <!-- Gambar 1 -->
+            <div class="gallery-row">
+                <img src="assets/upacara.jpg" class="gallery-img" alt="Upacara Bendera">
+                <div class="gallery-text">
+                    <h4>Upacara Bendera</h4>
+                    <p>Upacara Bendera adalah suatu acara yang dilakukan setiap hari Senin untuk menghormati jasa para pahlawan terdahulu yang sudah berjuang dan menumbuhkan rasa nasionalisme.</p>
+                </div>
+            </div>
+    
+            <!-- Gambar 2 -->
+            <div class="gallery-row">
+                <img src="assets/habsyi.jpg" class="gallery-img" alt="Ekstrakurikuler">
+                <div class="gallery-text">
+                    <h4>Beragam Ekstrakurikuler</h4>
+                    <p>Seperti Habsyi, Habsyi adalah kegiatan bersholawat dan mempelajari sejarah Nabi Muhammad SAW. Habsyi juga merupakan salah satu bentuk kesenian Islam yang diiringi dengan alat musik rebana. .</p>
+                </div>
+            </div>
+    
+            <!-- Gambar 3 -->
+            <div class="gallery-row">
+                <img src="assets/lomba.jpg" class="gallery-img" alt="Ekstrakurikuler">
+                <div class="gallery-text">
+                    <h4>Beragam Ekstrakurikuler</h4>
+                    <p>Drumband, adalah kegiatan seni musik yang dilakukan secara berkelompok dengan memainkan alat musik sambil berbaris. Drumband juga dikenal sebagai marching band.</p>
+                </div>
+            </div>
+    
+            <!-- Gambar 4 -->
+            <div class="gallery-row">
+                <img src="assets/eskul.jpg" class="gallery-img" alt="Lomba dan Kompetisi">
+                <div class="gallery-text">
+                    <h4>Beragam lomba</h4>
+                    <p>Lomba Baris berbaris, Baris Berbaris adalah latihan fisik yang dilakukan dengan berjalan kaki secara teratur dan berirama. Baris berbaris juga dikenal dengan istilah Peraturan Baris Berbaris (PBB).  </p>
+                </div>
+            </div>
+    
+            <!-- Gambar 5 -->
+            <div class="gallery-row">
+                <img src="assets/baktisosial.jpg" class="gallery-img" alt="Kegiatan Bersih Bersama">
+                <div class="gallery-text">
+                    <h4>Bersih Bersama</h4>
+                    <p>Bersih bersama adalah gerakan yang mengajak masyarakat untuk berpartisipasi dalam menjaga kebersihan lingkungan. Gerakan ini bertujuan untuk menciptakan lingkungan yang bersih dan sehat bagi seluruh warga. .</p>
+                </div>
+            </div>
+    
+            <!-- Gambar 6 -->
+            <div class="gallery-row">
+                <img src="assets/kebersamaan.jpg" class="gallery-img" alt="Kebersamaan antara Murid dan Guru">
+                <div class="gallery-text">
+                    <h4>Kebersamaan antara Murid dan Guru</h4>
+                    <p>Kebersamaan antara murid dan guru adalah hubungan yang erat antara pendidik dan peserta didik yang melibatkan proses belajar mengajar, aspek emosional, dan sosial. Kebersamaan ini dapat memperkuat hubungan antara guru dan murid, serta menciptakan memori yang tak terlupakan. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        /* Kontainer Galeri */
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+    
+        /* Baris Galeri (Gambar & Teks Sejajar) */
+        .gallery-row {
+            display: flex;
+            align-items: center;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        .gallery-row:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+    
+        /* Gambar Galeri */
+        .gallery-img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 20px;
+            transition: transform 0.3s ease;
+        }
+    
+        .gallery-row:hover .gallery-img {
+            transform: scale(1.05);
+        }
+    
+        /* Teks Galeri */
+        .gallery-text {
+            flex: 1;
+        }
+    
+        .gallery-text h4 {
+            margin-bottom: 5px;
+            font-size: 18px;
+            color: #333;
+        }
+    
+        .gallery-text p {
+            font-size: 14px;
+            color: #666;
+        }
+    
+        /* Responsif untuk HP */
+        @media (max-width: 768px) {
+            .gallery-row {
+                flex-direction: column;
+                text-align: center;
+            }
+    
+            .gallery-img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+    
+    
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 SMAN 1 Sungai Pandan. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll("[data-bs-toggle='modal']").forEach(item => {
+                item.addEventListener("click", function () {
+                    document.getElementById("modalImage").src = this.getAttribute("data-img");
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add("show"); // Tambahkan efek fade-in saat halaman dimuat
+        
+            document.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", function(event) {
+                    // Cek apakah link adalah halaman yang sama (hindari link eksternal)
+                    if (this.href.startsWith(window.location.origin)) {
+                        event.preventDefault(); // Cegah perpindahan langsung
+                        let targetUrl = this.href;
+        
+                        // Tambahkan efek fade-out sebelum berpindah halaman
+                        document.body.style.opacity = "0";
+                        document.body.style.transform = "translateY(10px)";
+        
+                        setTimeout(() => {
+                            window.location.href = targetUrl;
+                        }, 500); // Tunggu 500ms sebelum pindah halaman
+                    }
+                });
+            });
+        });
+        </script>
+</body>
+</html>

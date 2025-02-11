@@ -1,0 +1,609 @@
+/* Reset dasar */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* Tombol Buka Modal */
+.btn-open {
+    background: #ffc107;
+    color: #000;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-20px); /* Modal awal sedikit ke atas */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+.modal.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0); /* Modal turun ke posisi normal */
+}
+
+/* Konten modal */
+.modal-content {
+    background: linear-gradient(to bottom, #0033cc, #0099ff);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95);
+    transition: transform 0.3s ease-out;
+}
+
+
+/* Header */
+.header {
+    background: #ffc107;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+/* Isi Modal */
+.modal-body {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Link */
+.link {
+    color: yellow;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* Tombol Close */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    color: #888;
+}
+.close-btn:hover {
+    color: #555;
+}
+
+/* List Persyaratan */
+.requirements {
+    text-align: left;
+    padding: 0;
+    list-style: none;
+}
+
+.requirements li {
+    background: white;
+    color: black;
+    margin: 6px 0;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Akreditasi */
+.akreditasi img {
+    width: 150px;
+    margin-top: 10px;
+}
+
+
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+/* Navbar Styling */
+.navbar {
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Hero section */
+.hero {
+    background: url('assets/school.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+    height: 40px;  
+    margin-right: 10px;
+}
+
+/* Navbar efek hover */
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+
+/* Container utama */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Kontainer kartu seragam */
+.uniform-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Kartu seragam */
+.uniform-card {
+    width: 220px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+
+}
+
+/* Efek hover */
+.uniform-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Gambar seragam agar memenuhi kartu */
+.uniform-card img {
+    width: 100%;
+    height: 200px; /* Ukuran gambar seragam */
+    object-fit: cover;
+    display: block;
+    margin: 10px auto; /* Memberikan jarak agar lebih rapi */
+    border-radius: 8px;
+}
+
+
+/* Nama seragam */
+.uniform-card p {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Container gambar bercabang */
+.uniform-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Gambar tambahan (logo, sepatu) */
+.uniform-details img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background: white;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling untuk Visi & Misi */
+.visi-misi-container {
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Visi */
+.visi {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-left: 5px solid #007bff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* Misi */
+.misi {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.misi h3 {
+    color: #007bff;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.misi ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.misi ul li {
+    background: url('assets/logo.jpg') no-repeat left center;
+    background-size: 20px;
+    padding-left: 30px;
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: left;
+}
+
+/* Efek Hover */
+.visi:hover, .misi:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+
+.profil-sekolah {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabel-profil {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabel-profil td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.tabel-profil tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabel-profil tr:hover {
+    background-color: #ddd;
+}
+
+.tabel-profil td:first-child {
+    font-weight: bold;
+    background: #007bff;
+    color: white;
+    width: 200px;
+}
+/* Garis pembatas antar bagian */
+.section-divider {
+    border-top: 3px solid #ccc; /* Garis pemisah tipis */
+    margin: 40px auto; /* Memberikan jarak ke atas dan bawah */
+    width: 200%; /* Sesuai lebar konten */
+}
+
+/* Container Sambutan Kepala Sekolah */
+.sambutan-kepsek {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* Styling untuk Foto Kepala Sekolah */
+.kepsek-img {
+    width: 180px;
+    height: 270px;
+    border-radius: 10px; /* Tidak ada border hexagonal, lebih modern */
+    object-fit: cover;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling untuk Teks Sambutan */
+.sambutan-text {
+    flex: 1;
+    text-align: left;
+}
+
+.sambutan-text h2 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.sambutan-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+
+.wakasek-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    max-width: 1000px;
+}
+
+.wakasek-card {
+    width: 220px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+}
+
+.wakasek-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.wakasek-card h4 {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.wakasek-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Animasi transisi halaman */
+.page-transition {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.page-transition.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Efek transisi halaman */
+body {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+body.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+a {
+    pointer-events: auto;
+}
+
+
+/* Style Umum */
+.contact-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Informasi Kontak */
+.contact-info {
+    width: 45%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2, .contact-info h3 {
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin: 8px 0;
+    color: #555;
+}
+
+
+
+.social-media {
+    margin-top: 15px;
+}
+
+.social-icons a[href*="facebook"] { color: #1877f2; } /* Biru Facebook */
+.social-icons a[href*="instagram"] { color: #e1306c; } /* Pink Instagram */
+.social-icons a[href*="youtube"] { color: #ff0000; } /* Merah YouTube */
+.social-icons a[href*="wa.me"] { color: #25D366; } /* Hijau WhatsApp */
+
+
+.social-media a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.social-media a:hover {
+    color: #007bff;
+}
+
+/* Formulir */
+.contact-form {
+    width: 50%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+}
+
+.contact-form input, .contact-form select, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-form .form-group input {
+    width: 50%;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.btn-submit {
+    display: inline-block;
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background: darkgreen;
+}
+
+@media (max-width: 600px) {
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+        font-size: 14px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* Responsif */
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .uniform-card {
+        width: 180px;
+    }
+}
